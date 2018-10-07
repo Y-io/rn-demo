@@ -19,6 +19,7 @@ export default class Wallet extends Component {
 
   render() {
     const { y } = this.state
+    console.log(y)
     return (
       <SafeAreaView style={styles.root}>
         <View style={styles.container}>
@@ -29,7 +30,6 @@ export default class Wallet extends Component {
                 cardHeight * i,
                 (cardHeight - cardTitle) * -i,
               ]
-
               if (i > 0) {
                 inputRange.push(cardHeight * i)
                 outputRange.push((cardHeight - cardPadding) * -i)
