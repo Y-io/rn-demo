@@ -3,6 +3,7 @@ import Main from './screen/main'
 import Wallet from './screen/wallet'
 import Swiper from './screen/swiper'
 import LiveProduct from './screen/liveProduct'
+import AppStore from './screen/appStore'
 
 export default createStackNavigator(
   {
@@ -26,6 +27,10 @@ export default createStackNavigator(
       screen: LiveProduct,
       navigationOptions: { header: null },
     },
+    AppStore: {
+      screen: AppStore,
+      navigationOptions: { header: null },
+    },
   },
-  { initialRouteName: 'LiveProduct' },
+  { initialRouteName: 'AppStore' },
 )
