@@ -17,9 +17,9 @@ export default class Card extends Component {
     const { color, name, price } = this.props
     return (
       <View style={[styles.card, { backgroundColor: color }]}>
-        <Text>
+        {/* <Text>
           {name} - {price}
-        </Text>
+        </Text> */}
       </View>
     )
   }

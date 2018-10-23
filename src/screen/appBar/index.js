@@ -13,15 +13,15 @@ import Data from './items'
 
 const { height } = Dimensions.get('window')
 const ScrollViewHeight = height - 56
-const HEAD_MAX_HEIGHT = 100
+const HEAD_MAX_HEIGHT = 160
 const HEAD_MIN_HEIGHT = 56
 
-export default class Card extends Component {
+export default class AppBar extends Component {
   constructor(props) {
     super(props)
     this.state = {
       y: new Animated.Value(0),
-      h: new Animated.Value(0),
+      // h: new Animated.Value(0),
     }
   }
 
@@ -37,7 +37,7 @@ export default class Card extends Component {
     return (
       <View style={styles.root}>
         <Animated.View style={[styles.head, { height: headHeight }]}>
-          <Text style={styles.headText}>头部</Text>
+          <Text style={[styles.headText]}>头部</Text>
         </Animated.View>
         <ScrollView
           style={{ flex: 1 }}
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
   },
   headText: {
     textAlign: 'center',
-    lineHeight: 56,
+    lineHeight: 80,
     fontSize: 20,
     color: '#fff',
   },
